@@ -1,7 +1,7 @@
 from aiohttp_security.abc import AbstractAuthorizationPolicy
 
-from aiohttpdemo_blog import db
-from aiohttpdemo_blog.typedefs import db_key
+from . import db
+from .typedefs import db_key
 
 
 class DBAuthorizationPolicy(AbstractAuthorizationPolicy):

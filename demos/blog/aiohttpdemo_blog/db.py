@@ -12,7 +12,7 @@ from sqlalchemy.orm import (
 )
 from sqlalchemy.sql import select
 
-from aiohttpdemo_blog.typedefs import config_key, db_key
+from .typedefs import config_key, db_key
 
 
 class Base(DeclarativeBase):

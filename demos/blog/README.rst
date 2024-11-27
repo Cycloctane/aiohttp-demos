@@ -30,7 +30,7 @@ Check db for created data::
 
 Run server::
 
-    $ python aiohttpdemo_blog/main.py -c config/user_config.toml
+    $ python -m aiohttpdemo_blog -c config/user_config.toml
 
 
 (example creds: Bob/bob)

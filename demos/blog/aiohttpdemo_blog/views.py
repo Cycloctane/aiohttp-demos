@@ -2,9 +2,9 @@ import aiohttp_jinja2
 from aiohttp import web
 from aiohttp_security import remember, forget, authorized_userid
 
-from aiohttpdemo_blog import db
-from aiohttpdemo_blog.forms import validate_login_form
-from aiohttpdemo_blog.typedefs import db_key
+from . import db
+from .forms import validate_login_form
+from .typedefs import db_key
 
 
 def redirect(router, route_name):

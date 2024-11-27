@@ -1,5 +1,5 @@
-from aiohttpdemo_blog import db
-from aiohttpdemo_blog.security import check_password_hash
+from . import db
+from .security import check_password_hash
 
 
 async def validate_login_form(conn, form):

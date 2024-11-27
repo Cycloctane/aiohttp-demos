@@ -10,11 +10,11 @@ from aiohttp_session import setup as setup_session
 from aiohttp_session.redis_storage import RedisStorage
 from redis import asyncio as aioredis
 
-from aiohttpdemo_blog.db_auth import DBAuthorizationPolicy
-from aiohttpdemo_blog.db import init_db
-from aiohttpdemo_blog.routes import setup_routes
-from aiohttpdemo_blog.settings import load_config, PACKAGE_NAME
-from aiohttpdemo_blog.typedefs import config_key
+from .db_auth import DBAuthorizationPolicy
+from .db import init_db
+from .routes import setup_routes
+from .settings import load_config, PACKAGE_NAME
+from .typedefs import config_key
 
 
 log = logging.getLogger(__name__)
@@ -83,15 +83,3 @@ def main(configpath):
     logging.basicConfig(level=logging.DEBUG)
     app = init_app(config)
     web.run_app(app)
-
-
-if __name__ == '__main__':
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument("-c", "--config", help="Provide path to config file")
-    args = parser.parse_args()
-
-    if args.config:
-        main(args.config)
-    else:
-        parser.print_help()
